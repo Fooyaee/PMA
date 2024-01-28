@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/bootstrap.bundle.min.js"></script>
     <style>
-    header {
+    
+    header{
         position: fixed;
         top: 0;
         left: 0;
@@ -25,32 +26,36 @@
     }
 
 
-        body{
-            background-color: #bfaec4;
-            margin-top: 75px;
-        }
+    body{
+        background-color: #bfaec4;
+        margin-top: 75px;
+    }
 
-        #carouselExampleAutoplaying{
-            width: 100% !important;
-        }
+    #carouselExampleAutoplaying{
+        width: 100% !important;
+    }
 
-        .main-content{
-            padding-top: 10px;
-            padding-right: 40px;
-            padding-bottom: 10px;
-            padding-left: 40px;
-            background-color: #fff;
-            margin-left:100px;
-            margin-right: 100px;
+    .main-content{
+        padding-top: 10px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        background-color: #fff;
+        margin-left:100px;
+        margin-right: 100px;
         }
+        
+    #footer-body{
+        padding: 40px;
+    }
 
     </style>
 </head>
 
 <body>
     <header>
-        <div style="color: #fff; display: flex; align-items: center; font-size: 25px; font-family: 'Oswald', sans-serif; height: 70px;">
-            <img src="pic/logo.jpg" width="84" height="63" style="margin-right: 20px; margin-left: 20px;">
+        <div style="color: #fff; display: flex; align-items: center; font-size: 25px; font-family: 'Oswald', sans-serif; height: 50px;">
+            <img src="pic/logo.jpg" width="70" height="49" style="margin-right: 20px; margin-left: 20px;">
             Eat In Warwick
         </div>
         <!-- Search box -->
@@ -62,7 +67,7 @@
     </header>
 
 
-    <div class="main-content" >
+    <div class="main-content">
         <!-- Breadcrumb -->
         <!-- Code adapted from https://getbootstrap.com/docs/5.3/components/breadcrumb/ -->
         <nav aria-label="breadcrumb">
@@ -112,21 +117,21 @@
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="pic/homepage/pam.jpg" class="d-block w-100" alt="...">
+                        <img src="pic/homepage/pam.jpg" class="d-block w-100">
                         <div class="carousel-caption d-none d-md-block">
                             <h5 style="font-family: 'Oswald', sans-serif; font-size: 26px;">Pret A Manger</h5>
                             <p style="font-family: 'Oswald', sans-serif; font-size: 23px;">Fresh food prepared each day.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="pic/homepage/dd.jpg" class="d-block w-100" alt="...">
+                        <img src="pic/homepage/dd.jpg" class="d-block w-100">
                         <div class="carousel-caption d-none d-md-block">
                             <h5 style="color: Black; font-family: 'Oswald', sans-serif; font-size: 26px;">Dirty Duck</h5>
                             <p style="color: black; font-family: 'Oswald', sans-serif; font-size: 23px;">The Dirty Duck is our fantastic eatery at the centre of the Warwick campus, serving up a delicious menu for freshly prepared food alongside guest ales and a great range of gins and rum.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="pic/homepage/vst.jpg" class="d-block w-100" alt="...">
+                        <img src="pic/homepage/vst.jpg" class="d-block w-100">
                         <div class="carousel-caption d-none d-md-block">
                             <h5 style="font-family: 'Oswald', sans-serif; font-size: 26px;">Varsity</h5>
                             <p style="font-family: 'Oswald', sans-serif; font-size: 23px;">The most acclaimed restaurant near the school!</p>
@@ -155,7 +160,7 @@
                     <div class="card-body">
                         <p class="card-title" style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 30px;">“</p>
                         <p class="card-text" style="font-family: 'Oswald', sans-serif;">As a student, using Eat In Warwick has made my on-campus dining experience incredibly convenient. The website provides a user-friendly platform where I can easily explore and discover a variety of food options available within the university premises. Now, finding my preferred meals has become a hassle-free task. Whether I'm craving a quick snack or a hearty meal, Eat In Warwick has simplified the process, allowing me to make informed choices and enjoy a diverse range of delicious foods without any difficulty. It has truly become an essential tool in enhancing my overall dining satisfaction on campus."</p>
-                        <p class="card-text" style="font-family: 'Oswald', sans-serif; color: #bfaec4;">Kazuma Mitchell - A Student from Warwick</p>
+                        <p class="card-text" style="font-family: 'Oswald', sans-serif; color: #bfaec4; font-size: 22px;">Kazuma Mitchell - A Student from Warwick</p>
                     </div>
                 </div>
             </div>
@@ -166,8 +171,8 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <p class="card-title" style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 30px;">“</p>
-                        <p class="card-text" style="font-family: 'Oswald', sans-serif;">When I had to Eat In the school and nearby restaurants due to the deadline of homework, Eat In Warwick quickly showed me all the restaurants in the school and related details. I like his map navigation function very much because I can easily get lost in school, and I don't need to waste more time on the road according to this function. And there are actual pictures of each meal on the website, which also saves my decision-making time and gives me more time to focus on my studies. Love!"</p>
-                        <p class="card-text" style="font-family: 'Oswald', sans-serif; color: #bfaec4;">Fooyae - A Student from Warwick</p>
+                        <p class="card-text" style="font-family: 'Oswald', sans-serif;">When I had to Eat In the school and nearby restaurants due to the deadline of assignments, Eat In Warwick quickly showed me all the restaurants in the school and related details. I like his map navigation function very much because I can easily get lost in school, and I don't need to waste more time on the road according to this function. Also, there are actual pictures of each meal on the website, which also saves my decision-making time and gives me more time to focus on my studies. Love!"</p>
+                        <p class="card-text" style="font-family: 'Oswald', sans-serif; color: #bfaec4; font-size: 22px;">Fooyae - A Student from Warwick</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -175,7 +180,29 @@
                 </div>
             </div>
         </div>
-        
+    </div>
+
+    <!-- Footer -->
+    <div style="margin-left: 100px; margin-right: 100px; background-color: #552d62; color: white; font-family: 'Oswald', sans-serif;">
+        <div class="row">
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>Contact Warwick Retail!</h2>
+                <p>If you have any fantastic idea about foods, please contact Warwick Retail official directly.</p>
+                <p>warwickretail@warwick.ac.uk</p>
+            </div>
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>Follow Their Insgram!</h2>
+                <p>Get more intuitive food information on Warwick Retail's official social media!</p>
+                <button class="btn btn-primary" style="background-color: #bfaec4; border-color: #bfaec4;">
+                    <span>@warwickretail</span>
+                </button>
+            </div>
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>About Us!</h2>
+                <p>Eat In Warwick is only committed to providing you with more convenient services, if you have any suggestions, please contact the developer email.</p>
+                <p>unknowndeveloper@eatinwarwick.com</p>
+            </div>
+        </div>
     </div>
 
 </body>
