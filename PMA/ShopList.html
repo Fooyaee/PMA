@@ -1,36 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shops</title>
+    <title>Eat In Warwick - Shop List</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <script src="bootstrap.bunble.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Filter&Sort.js"></script>
     <style>
-        header{
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px;
             background-color: #552d62;
+            z-index: 1000;
+            /* Code generated using ChatGPT */
+        }
+
+
+        body {
+            background-color: #bfaec4;
+            margin-top: 50px;
+        }
+
+        .main-content {
+            padding-top: 10px;
+            padding-right: 40px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            background-color: #fff;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        #footer-body {
+            padding: 40px;
         }
     </style>
 </head>
+
 <body>
     <header>
-        <div style="color: #fff; display: flex; align-items: center; font-size: 25px; font-family: 'Oswald', sans-serif;">
-            <img src="https://bkimg.cdn.bcebos.com/smart/f703738da9773912b31ba0b727519118367adbb44486-bkimg-process,v_1,rw_1,rh_1,pad_1,color_ffffff?x-bce-process=image/format,f_auto" width="50" height="50" style="margin-right: 10px;">
+        <div
+            style="color: #fff; display: flex; align-items: center; font-size: 25px; font-family: 'Oswald', sans-serif; height: 50px;">
+            <img src="pic/logo.jpg" width="70" height="49" style="margin-right: 20px; margin-left: 20px;">
             Eat In Warwick
         </div>
-        <form action="/search" method="get">
-            <input type="text" id="search" name="q" placeholder="keywords here..." style="height: 30px;width: 200px; font-family: 'Oswald', sans-serif;">
-            <input type="submit" value="Search" style="height: 36px; background-color: #fff; font-family: 'Oswald', sans-serif; color: #552d62;">
+        <!-- Search box -->
+        <!-- Code adapted from https://getbootstrap.com/docs/5.3/components/navbar/#forms -->
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Keywords here..." aria-label="Search"
+                style="height: 36px; width: 200px; font-family: 'Oswald', sans-serif;">
+            <button class="btn btn-outline-success" type="submit"
+                style="height: 36px; background-color: #bfaec4; font-family: 'Oswald', sans-serif; color: #552d62; border-color: #bfaec4;">Search</button>
         </form>
     </header>
 
 
+    <div class="main-content">
+        <!-- Breadcrumb -->
+        <!-- Code adapted from https://getbootstrap.com/docs/5.3/components/breadcrumb/ -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"
+                    style="font-family: 'Oswald', sans-serif; font-size: 24px; margin-top: 20px;"><a
+                        href="Homepage.html" style="color: #552d62;">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"
+                    style="font-family: 'Oswald', sans-serif; font-size: 24px; color: #552d62; margin-top: 20px;">
+                    Restaurant</li>
+            </ol>
+        </nav>
+        <button onclick="sortByRating()">Sort by Rating</button>
+        <button onclick="sortByPrice()">Sort by Price</button>
+        <button onclick="filterByLocation('inside')">On Campus</button>
+        <button onclick="filterByLocation('outside')">Off Campus</button>
+        <button onclick="resetFilter()">Reset</button>
+
+        <!-- ResList -->
+        <ul id="restaurantList">
+            <li data-rating="4.5" data-price="10" data-location="outside">
+                <img src="pic/homepage/BBQ.jpg" style="margin-bottom: 5px;" width="100px">
+                Restaurant A
+            </li>
+            <li data-rating="4.0" data-price="20" data-location="inside">Restaurant B</li>
+            <li data-rating="3.5" data-price="14" data-location="inside">Restaurant C</li>
+
+        </ul>
+
+
+        <p><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+
+    </div>
+
+    <!-- Footer -->
+    <div
+        style="margin-left: 100px; margin-right: 100px; background-color: #552d62; color: white; font-family: 'Oswald', sans-serif;">
+        <div class="row">
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>Contact Warwick Retail!</h2>
+                <p>If you have any fantastic idea about foods, please contact Warwick Retail official directly.</p>
+                <p>warwickretail@warwick.ac.uk</p>
+            </div>
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>Follow Their Instagram!</h2>
+                <p>Get more intuitive food information and the latest news on Warwick Retail's official social media.
+                    Come and interact!</p>
+                <a href="https://www.instagram.com/warwickretail/" class="btn btn-primary"
+                    style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">
+                    @warwickretail
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>About Us!</h2>
+                <p>Eat In Warwick is only committed to providing you with more convenient services, if you have any
+                    suggestions, please contact the developer email.</p>
+                <p>lazyDeveloper@eatInWarwick.com</p>
+            </div>
+        </div>
+
 </body>
+
 </html>
