@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/Filter&Sort.js"></script>
+    <script src="https://kit.fontawesome.com/1dd755d1e7.js" crossorigin="anonymous"></script>
     <style>
         header {
             position: fixed;
@@ -42,8 +43,18 @@
             margin-right: 100px;
         }
 
+        .card-text {
+            margin-bottom: 5px;
+        }
+
         #footer-body {
             padding: 40px;
+        }
+
+        #restaurantList {
+            margin-top: 20px;
+            padding: 5px;
+            width: 98%;
         }
     </style>
 </head>
@@ -79,6 +90,7 @@
                     Restaurant</li>
             </ol>
         </nav>
+
         <button onclick="sortByRating()">Sort by Rating</button>
         <button onclick="sortByPrice()">Sort by Price</button>
         <button onclick="filterByLocation('inside')">On Campus</button>
@@ -86,7 +98,7 @@
         <button onclick="resetFilter()">Reset</button>
 
         <!-- ResList -->
-        <ul id="restaurantList">
+        <!-- <ul id="restaurantList">
             <li data-rating="4.5" data-price="10" data-location="outside">
                 <img src="pic/homepage/BBQ.jpg" style="margin-bottom: 5px;" width="100px">
                 Restaurant A
@@ -94,10 +106,152 @@
             <li data-rating="4.0" data-price="20" data-location="inside">Restaurant B</li>
             <li data-rating="3.5" data-price="14" data-location="inside">Restaurant C</li>
 
-        </ul>
+        </ul> -->
 
+        <div id="restaurantList">
 
-        <p><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
+                                Benugo Bar and Kitchen
+                            </h5>
+                            <p class="card-text">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Warwick Art Center
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-money-bill"></i>
+                                ￡10-20 per person
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-star"></i>
+                                3.9 (220)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
+                                Benugo Bar and Kitchen
+                            </h5>
+                            <p class="card-text">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Warwick Art Center
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-money-bill"></i>
+                                ￡10-20 per person
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-star"></i>
+                                3.9 (220)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
+                                Benugo Bar and Kitchen
+                            </h5>
+                            <p class="card-text">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Warwick Art Center
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-money-bill"></i>
+                                ￡10-20 per person
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-star"></i>
+                                3.9 (220)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
+                                Benugo Bar and Kitchen
+                            </h5>
+                            <p class="card-text">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Warwick Art Center
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-money-bill"></i>
+                                ￡10-20 per person
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-star"></i>
+                                3.9 (220)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
+                                Benugo Bar and Kitchen
+                            </h5>
+                            <p class="card-text">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Warwick Art Center
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-money-bill"></i>
+                                ￡10-20 per person
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-star"></i>
+                                3.9 (220)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
+                                Benugo Bar and Kitchen
+                            </h5>
+                            <p class="card-text">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Warwick Art Center
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-money-bill"></i>
+                                ￡10-20 per person
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-star"></i>
+                                3.9 (220)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
     </div>
 
@@ -112,10 +266,12 @@
             </div>
             <div class="col-sm-12 col-md-4" id="footer-body">
                 <h2>Follow Their Instagram!</h2>
-                <p>Get more intuitive food information and the latest news on Warwick Retail's official social media.
+                <p>Get more intuitive food information and the latest news on Warwick Retail's official social
+                    media.
                     Come and interact!</p>
                 <a href="https://www.instagram.com/warwickretail/" class="btn btn-primary"
                     style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">
+                    <i class="fa-brands fa-instagram"></i>
                     @warwickretail
                 </a>
             </div>
@@ -126,6 +282,7 @@
                 <p>lazyDeveloper@eatInWarwick.com</p>
             </div>
         </div>
+    </div>
 
 </body>
 
