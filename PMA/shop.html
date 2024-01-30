@@ -84,17 +84,17 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"
                     style="font-family: 'Oswald', sans-serif; font-size: 24px; margin-top: 20px;"><a
-                        href="Homepage.html" style="color: #552d62;">Home</a></li>
+                        href="home.html" style="color: #552d62;">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page"
                     style="font-family: 'Oswald', sans-serif; font-size: 24px; color: #552d62; margin-top: 20px;">
-                    Restaurant</li>
+                    Shops</li>
             </ol>
         </nav>
 
         <button onclick="sortByRating()">Sort by Rating</button>
         <button onclick="sortByPrice()">Sort by Price</button>
         <button onclick="filterByLocation('inside')">On Campus</button>
-        <button onclick="filterByLocation('outside')">Off Campus</button>
+        <button onclick="filterByLocation('outside')">Around Campus</button>
         <button onclick="resetFilter()">Reset</button>
 
         <!-- ResList -->
@@ -108,10 +108,8 @@
 
         </ul> -->
 
-        <div id="restaurantList">
-
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="restaurantList">
+                <div class="col" data-rating="4.5" data-price="10" data-location="outside">
                     <div class="card h-100">
                         <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
                         <div class="card-body">
@@ -120,7 +118,7 @@
                                 Benugo Bar and Kitchen
                             </h5>
                             <p class="card-text">
-                                <i class="fa-solid fa-location-dot"></i>
+                                <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
                                 Warwick Art Center
                             </p>
                             <p class="card-text">
@@ -134,16 +132,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" data-rating="4.3" data-price="12" data-location="outside">
                     <div class="card h-100">
                         <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title"
                                 style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
-                                Benugo Bar and Kitchen
+                                R4.3P12
                             </h5>
                             <p class="card-text">
-                                <i class="fa-solid fa-location-dot"></i>
+                                <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
                                 Warwick Art Center
                             </p>
                             <p class="card-text">
@@ -157,16 +155,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col"  data-rating="4.6" data-price="15" data-location="inside">
                     <div class="card h-100">
                         <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title"
                                 style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
-                                Benugo Bar and Kitchen
+                                R4.6P15
                             </h5>
                             <p class="card-text">
-                                <i class="fa-solid fa-location-dot"></i>
+                                <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
                                 Warwick Art Center
                             </p>
                             <p class="card-text">
@@ -180,16 +178,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" data-rating="3.5" data-price="20" data-location="inside">
                     <div class="card h-100">
                         <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title"
                                 style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
-                                Benugo Bar and Kitchen
+                                R3.5P20
                             </h5>
                             <p class="card-text">
-                                <i class="fa-solid fa-location-dot"></i>
+                                <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
                                 Warwick Art Center
                             </p>
                             <p class="card-text">
@@ -203,16 +201,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" data-rating="4.9" data-price="18" data-location="inside">
                     <div class="card h-100">
                         <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title"
                                 style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
-                                Benugo Bar and Kitchen
+                                R4.9P18
                             </h5>
                             <p class="card-text">
-                                <i class="fa-solid fa-location-dot"></i>
+                                <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
                                 Warwick Art Center
                             </p>
                             <p class="card-text">
@@ -226,16 +224,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" data-rating="2.0" data-price="30" data-location="inside">
                     <div class="card h-100">
                         <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title"
                                 style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
-                                Benugo Bar and Kitchen
+                                R2.0P30
                             </h5>
                             <p class="card-text">
-                                <i class="fa-solid fa-location-dot"></i>
+                                <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
                                 Warwick Art Center
                             </p>
                             <p class="card-text">
@@ -251,7 +249,7 @@
                 </div>
             </div>
 
-        </div>
+        
 
     </div>
 
