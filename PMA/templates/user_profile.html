@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat In Warwick - Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/1dd755d1e7.js" crossorigin="anonymous"></script>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #552d62;
+            z-index: 1000;
+            /* Code generated using ChatGPT */
+        }
+
+
+        body {
+            background-color: #bfaec4;
+            margin-top: 50px;
+        }
+
+        .main-content {
+            padding-top: 10px;
+            padding-right: 40px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            background-color: #fff;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 70px;
+        }
+
+        #footer-body {
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div
+            style="color: #fff; display: flex; align-items: center; font-size: 25px; font-family: 'Oswald', sans-serif; height: 50px;">
+            <img src="{{ url_for('serve_image', filename='logo.jpg') }}" width="70" height="49"
+                style="margin-right: 20px; margin-left: 20px;">
+            Eat In Warwick
+        </div>
+        <div style="display: flex; align-items: center;">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Keywords here..." aria-label="Search"
+                    style="height: 36px; width: 400px; font-family: 'Oswald', sans-serif;">
+                <button class="btn btn-outline-success" type="submit"
+                    style="height: 36px; background-color: #bfaec4; font-family: 'Oswald', sans-serif; color: #552d62; border-color: #bfaec4;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search
+                </button>
+            </form>
+
+            <a href="user_profile.html" target="_blank">
+                <button class="btn btn-primary"
+                    style="margin-left: 10px; color: #4d1661; background-color: white; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">
+                    <img src="{{ url_for('serve_image', filename='bear.jpg') }}" width="18px" height="18px">
+                    Welcome, GloriaBear
+                </button>
+            </a>
+    </header>
+
+
+    <div class="main-content">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"
+                    style="font-family: 'Oswald', sans-serif; font-size: 24px; margin-top: 20px;"><a href="home.html"
+                        style="color: #552d62;">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"
+                    style="font-family: 'Oswald', sans-serif; font-size: 24px; color: #552d62; margin-top: 20px;">
+                    Profile</li>
+            </ol>
+        </nav>
+
+        <div class="container mt-5" style="margin-bottom: 20px;">
+            <div class="row">
+                <!-- 左边显示用户头像 -->
+                <div class="col-md-3"
+                    style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-left: 50px;">
+                    <img src="{{ url_for('serve_image', filename=user_info['avatar']) }}" class="img-fluid">
+                    <div style="font-family: 'Oswald', sans-serif; font-size: 20px; color: #552d62;">User Picture</div>
+                </div>
+
+                <!-- 右边显示用户 ID 和名字 -->
+                <div class="col-md-4" style="margin-left: 100px;">
+                    <h1 style="font-family: 'Oswald', sans-serif; font-size: 30px; color: #552d62; margin-bottom: 30px;">User Profile</h1>
+                    <p style="font-family: 'Oswald', sans-serif;">User ID: </p>
+                    <p>{{ user_info['id'] }}</p>
+                    <p style="font-family: 'Oswald', sans-serif;">User Name: </p>
+                    <p>{{ user_info['username'] }}</p>
+                    <p style="font-family: 'Oswald', sans-serif;">Phone Number: </p>
+                    <p>{{ user_info['phone'] }}</p>
+                    <p style="font-family: 'Oswald', sans-serif;">Email: </p>
+                    <p>{{ user_info['email'] }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div
+        style="margin-left: 100px; margin-right: 100px; background-color: #552d62; color: white; font-family: 'Oswald', sans-serif;">
+        <div class="row">
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>Contact Warwick Retail!</h2>
+                <p>If you have any fantastic idea about foods, please contact Warwick Retail official directly.</p>
+                <p>warwickretail@warwick.ac.uk</p>
+            </div>
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>Follow Their Instagram!</h2>
+                <p>Get more intuitive food information and the latest news on Warwick Retail's official social media.
+                    Come and interact!</p>
+                <a href="https://www.instagram.com/warwickretail/" class="btn btn-primary"
+                    style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">
+                    <i class="fa-brands fa-instagram"></i>
+                    @warwickretail
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>About Us!</h2>
+                <p>Eat In Warwick is only committed to providing you with more convenient services, if you have any
+                    suggestions, please contact the developer email.</p>
+                <p>lazyDeveloper@eatInWarwick.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+
+</html>
