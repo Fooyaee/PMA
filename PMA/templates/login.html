@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat In Warwick - login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/1dd755d1e7.js" crossorigin="anonymous"></script>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #552d62;
+            z-index: 1000;
+            /* Code generated using ChatGPT */
+        }
+
+
+        body {
+            background-color: #bfaec4;
+            margin-top: 50px;
+        }
+
+        .main-content {
+            padding-top: 10px;
+            padding-right: 40px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            background-color: #fff;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 70px;
+        }
+
+        #footer-body {
+            padding: 40px;
+        }
+
+        .d-flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            /* 使用 min-height 而不是 height */
+        }
+
+        .form-control {
+            border-color: #552d62;
+            margin-bottom: 10px;
+            width: 50%;
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div
+            style="color: #fff; display: flex; align-items: center; font-size: 25px; font-family: 'Oswald', sans-serif; height: 50px;">
+            <img src="{{ url_for('serve_image', filename='logo.jpg') }}" width="70" height="49"
+                style="margin-right: 20px; margin-left: 20px;">
+            Eat In Warwick
+        </div>
+    </header>
+
+
+    <div class="main-content" style="font-family: 'Oswald', sans-serif;">
+
+        <form class="d-flex" method="post" action="{{ url_for('login') }}">
+            <input class="form-control me-2" type="text" name="username" placeholder="Username" required>
+            <input class="form-control me-2" type="password" name="password" placeholder="Password" required>
+            <button class="btn btn-outline-success btn-primary" type="submit" style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4;">Login</button>
+        </form>
+
+    </div>
+
+    <!-- Footer -->
+    <div
+        style="margin-left: 100px; margin-right: 100px; background-color: #552d62; color: white; font-family: 'Oswald', sans-serif;">
+        <div class="row">
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>Contact Warwick Retail!</h2>
+                <p>If you have any fantastic idea about foods, please contact Warwick Retail official directly.</p>
+                <p>warwickretail@warwick.ac.uk</p>
+            </div>
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>Follow Their Instagram!</h2>
+                <p>Get more intuitive food information and the latest news on Warwick Retail's official social media.
+                    Come and interact!</p>
+                <a href="https://www.instagram.com/warwickretail/" class="btn btn-primary"
+                    style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">
+                    <i class="fa-brands fa-instagram"></i>
+                    @warwickretail
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-4" id="footer-body">
+                <h2>About Us!</h2>
+                <p>Eat In Warwick is only committed to providing you with more convenient services, if you have any
+                    suggestions, please contact the developer email.</p>
+                <p>lazyDeveloper@eatInWarwick.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+
+</html>
