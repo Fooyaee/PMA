@@ -42,6 +42,15 @@
             margin-right: 100px;
         }
 
+        .col-md-9 .card-text {
+            margin-bottom: 2px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .comment-text {
+            margin-bottom: 2px;
+        }
+
         #footer-body {
             padding: 40px;
         }
@@ -49,20 +58,33 @@
 </head>
 
 <body>
-    <header>
+    <header
+        style="display: flex; justify-content: space-between; align-items: center; height: 70px; padding: 0 20px; background-color: #552d62;">
         <div
-            style="color: #fff; display: flex; align-items: center; font-size: 25px; font-family: 'Oswald', sans-serif; height: 50px;">
-            <img src="pic/logo.jpg" width="70" height="49" style="margin-right: 20px; margin-left: 20px;">
+            style="color: #fff; display: flex; align-items: center; font-size: 25px; font-family: 'Oswald', sans-serif;">
+            <img src="pic/logo.jpg" width="70" height="49" style="margin-right: 20px;">
             Eat In Warwick
         </div>
-        <!-- Search box -->
-        <!-- Code adapted from https://getbootstrap.com/docs/5.3/components/navbar/#forms -->
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Keywords here..." aria-label="Search"
-                style="height: 36px; width: 200px; font-family: 'Oswald', sans-serif;">
-            <button class="btn btn-outline-success" type="submit"
-                style="height: 36px; background-color: #bfaec4; font-family: 'Oswald', sans-serif; color: #552d62; border-color: #bfaec4;">Search</button>
-        </form>
+
+        <div style="display: flex; align-items: center;">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Keywords here..." aria-label="Search"
+                    style="height: 36px; width: 400px; font-family: 'Oswald', sans-serif;">
+                <button class="btn btn-outline-success" type="submit"
+                    style="height: 36px; background-color: #bfaec4; font-family: 'Oswald', sans-serif; color: #552d62; border-color: #bfaec4;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search
+                </button>
+            </form>
+
+            <a href="user_profile.html" target="_blank">
+                <button class="btn btn-primary"
+                    style="margin-left: 10px; color: #4d1661; background-color: white; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">
+                    <img src="pic/homepage/CatHead.jpg" width="20px" height="20px">
+                    Welcome, User1
+                </button>
+            </a>
+        </div>
     </header>
 
 
@@ -88,7 +110,7 @@
                 <div class="col-md-4">
                     <img src="pic/res/Benugo/benugo-cover2.jpg" width="100%">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-4">
                     <div class="card-body">
                         <p class="card-title"
                             style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 28px; margin-bottom: 20px;">
@@ -119,6 +141,12 @@
                         </p>
                     </div>
                 </div>
+                <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 300px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.500712313037!2d-1.561592!3d52.379472799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48774b11c5ea4681%3A0x202c212b4f5d2812!2sBenugo%20Bar%20%26%20Kitchen%20at%20Warwick%20Arts%20Centre!5e0!3m2!1sen!2suk!4v1706752751699!5m2!1sen!2suk"
+                        width="300" height="300" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                
             </div>
         </div>
 
@@ -131,13 +159,13 @@
                 <button class="btn btn-primary"
                     style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    All day menu</button>
+                    All Day Menu</button>
             </a>
             <a href="https://warwick.ac.uk/services/retail/eat-drink/benugo/kids-menu.pdf" target="_blank">
                 <button class="btn btn-primary"
                     style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    Kids menu</button>
+                    Kids Menu</button>
             </a>
         </p>
 
@@ -148,34 +176,90 @@
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Mains</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
-                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Sides</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane"
-                    type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false"
-                    disabled>Disabled</button>
+                <button class="nav-link" id="dessert-tab" data-bs-toggle="tab" data-bs-target="#dessert-tab-pane"
+                    type="button" role="tab" aria-controls="dessert-tab-pane" aria-selected="false">Dessert</button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
                 tabindex="0">
-
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="..." class="img-fluid rounded-start" alt="...">
+                <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-top: -5px;">
+                    <div class="card mb-3" style="border-color: #bfaec4;">
+                        <div class="row g-0">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                                <img src="pic/res/Benugo/SpicyChickenBurger.jpg" width="120px" height="120px">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <p class="card-text" style="color: #552d62; margin-top: -8px;">Spicy Chicken Burger
+                                    </p>
+                                    <p class="card-text" style="color: #552d62;">￡14</p>
+                                    <p class="card-text"><small class="text-body-secondary">Buttermilk marinated
+                                            chicken, spicy crumb, Sriracha mayo, beef tomato, baby gem, pickled onion,
+                                            triple-cooked chips, 1212kcal.</small>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                                </p>
+                    </div>
+
+                    <div class="card mb-3" style="border-color: #bfaec4;">
+                        <div class="row g-0">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                                <img src="pic/res/Benugo/pizza.jpg" width="120px" height="120px">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <p class="card-text" style="color: #552d62; margin-top: -8px;">Meaty Warwick
+                                    </p>
+                                    <p class="card-text" style="color: #552d62;">￡13</p>
+                                    <p class="card-text"><small class="text-body-secondary">Mozzarella, pepperoni,
+                                            smoked bacon, Wiltshire ham, BBQ sauce, 1194kcal</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="border-color: #bfaec4; margin-top: -5px;">
+                        <div class="row g-0">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                                <img src="pic/res/Benugo/tlms.jpg" width="120px" height="120px">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <p class="card-text" style="color: #552d62; margin-top: -8px;">Tiramisu
+                                    </p>
+                                    <p class="card-text" style="color: #552d62;">￡6</p>
+                                    <p class="card-text"><small class="text-body-secondary">Layers of mascarpone, Benugo
+                                            blend coffee,
+                                            biscuits (v), 492kcal</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="border-color: #bfaec4; margin-top: -5px;">
+                        <div class="row g-0">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                                <img src="pic/res/Benugo/fries.jpg" width="120px" height="120px">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <p class="card-text" style="color: #552d62; margin-top: -8px;">Dirty fries
+                                    </p>
+                                    <p class="card-text" style="color: #552d62;">￡6.5</p>
+                                    <p class="card-text"><small class="text-body-secondary">Skinny fries, mozzarella,
+                                            smoked bacon,
+                                            chipotle mayo, French mustard, parsley, 448kcal</small>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -183,16 +267,157 @@
 
             </div>
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                ...</div>
+                <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-top: 5px;">
+                    <div class="card mb-3" style="border-color: #bfaec4;">
+                        <div class="row g-0">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                                <img src="pic/res/Benugo/SpicyChickenBurger.jpg" width="120px" height="120px">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <p class="card-text" style="color: #552d62; margin-top: -8px;">Spicy Chicken Burger
+                                    </p>
+                                    <p class="card-text" style="color: #552d62;">￡14</p>
+                                    <p class="card-text"><small class="text-body-secondary">Buttermilk marinated
+                                            chicken, spicy crumb, Sriracha mayo, beef tomato, baby gem, pickled onion,
+                                            triple-cooked chips, 1212kcal.</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3" style="border-color: #bfaec4;">
+                        <div class="row g-0">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                                <img src="pic/res/Benugo/pizza.jpg" width="120px" height="120px">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <p class="card-text" style="color: #552d62; margin-top: -8px;">Meaty Warwick
+                                    </p>
+                                    <p class="card-text" style="color: #552d62;">￡13</p>
+                                    <p class="card-text"><small class="text-body-secondary">Mozzarella, pepperoni,
+                                            smoked bacon, Wiltshire ham, BBQ sauce, 1194kcal</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                ...</div>
-            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
-                tabindex="0">...</div>
+                <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-top: 10px;">
+                    <div class="card mb-3" style="border-color: #bfaec4;">
+                        <div class="row g-0">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                                <img src="pic/res/Benugo/fries.jpg" width="120px" height="120px">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <p class="card-text" style="color: #552d62; margin-top: -8px;">Dirty fries
+                                    </p>
+                                    <p class="card-text" style="color: #552d62;">￡6.5</p>
+                                    <p class="card-text"><small class="text-body-secondary">Skinny fries, mozzarella,
+                                            smoked bacon,
+                                            chipotle mayo, French mustard, parsley, 448kcal</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="dessert-tab-pane" role="tabpanel" aria-labelledby="dessert-tab" tabindex="0">
+                <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-top: 5px;">
+                    <div class="card mb-3" style="border-color: #bfaec4; margin-top: -5px;">
+                        <div class="row g-0">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                                <img src="pic/res/Benugo/tlms.jpg" width="120px" height="120px">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <p class="card-text" style="color: #552d62; margin-top: -8px;">Tiramisu
+                                    </p>
+                                    <p class="card-text" style="color: #552d62;">￡6</p>
+                                    <p class="card-text"><small class="text-body-secondary">Layers of mascarpone, Benugo
+                                            blend coffee,
+                                            biscuits (v), 492kcal</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <p><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 
+
+        <!-- Comments -->
+        <p style="font-family: 'Oswald', sans-serif; font-size: 20px; color: #552d62;">
+            <i class="fa-solid fa-comment"></i>
+            Comments
+            <button class="btn btn-primary"
+                style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4;">Send
+                Your Comments!
+            </button>
+        </p>
+
+        <div class="card mb-3" style="height: 100px;">
+            <div class="row g-0">
+                <div class="col-md-1">
+                    <img src="pic/homepage/Fooyae.jpg" width="95px" height="95px"
+                        style="margin-left: 5px; margin-top: 2px;">
+                </div>
+                <div class="col-md-10" style="margin-left: 20px;">
+                    <div class="card-body">
+                        <p class="comment-text"
+                            style="color: #4d1661; font-family: 'Oswald', sans-serif; margin-top: -5px;">
+                            Uzar
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </p>
+                        <p class="comment-text" style="font-family: 'Oswald', sans-serif;">This Tiramisu is seriously
+                            tasty! Not too bitter, not too sweet, and it looks so good! But a little slow...</p>
+                        <p class="comment-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="height: 100px;">
+            <div class="row g-0">
+                <div class="col-md-1">
+                    <img src="pic/homepage/dBear.jpg" width="95px" height="95px"
+                        style="margin-left: 5px; margin-top: 2px;">
+                </div>
+                <div class="col-md-10" style="margin-left: 20px;">
+                    <div class="card-body">
+                        <p class="comment-text"
+                            style="color: #4d1661; font-family: 'Oswald', sans-serif; margin-top: -5px;">
+                            Jackson
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </p>
+                        <p class="comment-text" style="font-family: 'Oswald', sans-serif;">
+                            Food bland, service slow, prices high. Won't come back. Not worth it. 🙅‍♂️👎</p>
+                        <p class="comment-text"><small class="text-body-secondary">Last updated 2 weeks ago</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
 
     <!-- Footer -->
     <div
@@ -205,7 +430,8 @@
             </div>
             <div class="col-sm-12 col-md-4" id="footer-body">
                 <h2>Follow Their Instagram!</h2>
-                <p>Get more intuitive food information and the latest news on Warwick Retail's official social media.
+                <p>Get more intuitive food information and the latest news on Warwick Retail's official social
+                    media.
                     Come and interact!</p>
                 <a href="https://www.instagram.com/warwickretail/" class="btn btn-primary"
                     style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">
