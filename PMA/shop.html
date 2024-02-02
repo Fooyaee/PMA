@@ -52,28 +52,46 @@
         }
 
         #restaurantList {
-            margin-top: 20px;
+            margin-top: 5px;
             padding: 5px;
             width: 98%;
+        }
+
+        .no-underline {
+            text-decoration: none;
+            color: inherit;
         }
     </style>
 </head>
 
 <body>
-    <header>
+    <header
+        style="display: flex; justify-content: space-between; align-items: center; height: 70px; padding: 0 20px; background-color: #552d62;">
         <div
-            style="color: #fff; display: flex; align-items: center; font-size: 25px; font-family: 'Oswald', sans-serif; height: 50px;">
-            <img src="pic/logo.jpg" width="70" height="49" style="margin-right: 20px; margin-left: 20px;">
+            style="color: #fff; display: flex; align-items: center; font-size: 25px; font-family: 'Oswald', sans-serif;">
+            <img src="pic/logo.jpg" width="70" height="49" style="margin-right: 20px;">
             Eat In Warwick
         </div>
-        <!-- Search box -->
-        <!-- Code adapted from https://getbootstrap.com/docs/5.3/components/navbar/#forms -->
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Keywords here..." aria-label="Search"
-                style="height: 36px; width: 200px; font-family: 'Oswald', sans-serif;">
-            <button class="btn btn-outline-success" type="submit"
-                style="height: 36px; background-color: #bfaec4; font-family: 'Oswald', sans-serif; color: #552d62; border-color: #bfaec4;">Search</button>
-        </form>
+
+        <div style="display: flex; align-items: center;">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Keywords here..." aria-label="Search"
+                    style="height: 36px; width: 400px; font-family: 'Oswald', sans-serif;">
+                <button class="btn btn-outline-success" type="submit"
+                    style="height: 36px; background-color: #bfaec4; font-family: 'Oswald', sans-serif; color: #552d62; border-color: #bfaec4;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search
+                </button>
+            </form>
+
+            <a href="user_profile.html" target="_blank">
+                <button class="btn btn-primary"
+                    style="margin-left: 10px; color: #4d1661; background-color: white; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">
+                    <img src="pic/homepage/CatHead.jpg" width="20px" height="20px">
+                    Welcome, User1
+                </button>
+            </a>
+        </div>
     </header>
 
 
@@ -83,33 +101,33 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"
-                    style="font-family: 'Oswald', sans-serif; font-size: 24px; margin-top: 20px;"><a
-                        href="home.html" style="color: #552d62;">Home</a></li>
+                    style="font-family: 'Oswald', sans-serif; font-size: 24px; margin-top: 20px;"><a href="home.html"
+                        style="color: #552d62;">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page"
                     style="font-family: 'Oswald', sans-serif; font-size: 24px; color: #552d62; margin-top: 20px;">
                     Shops</li>
             </ol>
         </nav>
 
-        <button onclick="sortByRating()">Sort by Rating</button>
-        <button onclick="sortByPrice()">Sort by Price</button>
-        <button onclick="filterByLocation('inside')">On Campus</button>
-        <button onclick="filterByLocation('outside')">Around Campus</button>
-        <button onclick="resetFilter()">Reset</button>
+        <button onclick="sortByRating()" class="btn btn-primary"
+            style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">Sort
+            by Rating</button>
+        <button onclick="sortByPrice()" class="btn btn-primary"
+            style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">Sort
+            by Price</button>
+        <button onclick="filterByLocation('inside')" class="btn btn-primary"
+            style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">On
+            Campus</button>
+        <button onclick="filterByLocation('outside')" class="btn btn-primary"
+            style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">Around
+            Campus</button>
+        <button onclick="resetFilter()" class="btn btn-primary"
+            style="color: #4d1661; background-color:#bfaec4; border-color: #bfaec4; font-family: 'Oswald', sans-serif;">Reset</button>
 
         <!-- ResList -->
-        <!-- <ul id="restaurantList">
-            <li data-rating="4.5" data-price="10" data-location="outside">
-                <img src="pic/homepage/BBQ.jpg" style="margin-bottom: 5px;" width="100px">
-                Restaurant A
-            </li>
-            <li data-rating="4.0" data-price="20" data-location="inside">Restaurant B</li>
-            <li data-rating="3.5" data-price="14" data-location="inside">Restaurant C</li>
-
-        </ul> -->
-
-            <div class="row row-cols-1 row-cols-md-3 g-4" id="restaurantList">
-                <div class="col" data-rating="4.5" data-price="10" data-location="outside">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="restaurantList">
+            <div class="col" data-rating="4.5" data-price="15" data-location="inside">
+                <a href="S-benugo.html" class="no-underline">
                     <div class="card h-100">
                         <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
                         <div class="card-body">
@@ -131,18 +149,70 @@
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="col" data-rating="4.3" data-price="12" data-location="outside">
+                </a>
+            </div>
+            <div class="col" data-rating="3.9" data-price="5" data-location="inside">
+                <a href="S-pret.html" class="no-underline">
                     <div class="card h-100">
-                        <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
+                        <img src="pic/res/Pret/pret-cover.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title"
                                 style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
-                                R4.3P12
+                                Pret A Manger
                             </h5>
                             <p class="card-text">
                                 <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
-                                Warwick Art Center
+                                Rootes Building
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-money-bill"></i>
+                                ￡1-10 per person
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-star"></i>
+                                3.9 (166)
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col" data-rating="4.3" data-price="7" data-location="inside">
+                <a href="S-NAIC.html" class="no-underline">
+                    <div class="card h-100">
+                        <img src="pic/res/NAIC/NAIC.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
+                                NAIC Cafe
+                            </h5>
+                            <p class="card-text">
+                                <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
+                                Lord Bhattacharyya Building
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-money-bill"></i>
+                                ￡1-10 per person
+                            </p>
+                            <p class="card-text">
+                                <i class="fa-solid fa-star"></i>
+                                4.3 (65)
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col" data-rating="4.0" data-price="13" data-location="outside">
+                <a href="S-varsity.html" class="no-underline">
+                    <div class="card h-100">
+                        <img src="pic/res/Varsity/VarsityCover.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
+                                Varsity
+                            </h5>
+                            <p class="card-text">
+                                <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
+                                Gibbet Hill Road, CV4 7AJ
                             </p>
                             <p class="card-text">
                                 <i class="fa-solid fa-money-bill"></i>
@@ -150,106 +220,66 @@
                             </p>
                             <p class="card-text">
                                 <i class="fa-solid fa-star"></i>
-                                3.9 (220)
+                                4.0 (1556)
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="col"  data-rating="4.6" data-price="15" data-location="inside">
+                </a>
+            </div>
+            <div class="col" data-rating="4.1" data-price="6" data-location="outside">
+                <a href="S-subway.html" class="no-underline">
                     <div class="card h-100">
-                        <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
+                        <img src="pic/res/Subway/SubwayCover.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title"
                                 style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
-                                R4.6P15
+                                Subway
                             </h5>
                             <p class="card-text">
                                 <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
-                                Warwick Art Center
+                                Cannon Park, CV4 7EH
                             </p>
                             <p class="card-text">
                                 <i class="fa-solid fa-money-bill"></i>
-                                ￡10-20 per person
+                                ￡1-10 per person
                             </p>
                             <p class="card-text">
                                 <i class="fa-solid fa-star"></i>
-                                3.9 (220)
+                                4.1 (105)
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="col" data-rating="3.5" data-price="20" data-location="inside">
+                </a>
+            </div>
+            <div class="col" data-rating="4.2" data-price="8" data-location="inside">
+                <a href="S-nero.html" class="no-underline">
                     <div class="card h-100">
-                        <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
+                        <img src="pic/res/Nero/NeroCover.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title"
                                 style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
-                                R3.5P20
+                                Caffè Nero
                             </h5>
                             <p class="card-text">
                                 <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
-                                Warwick Art Center
+                                Sports & Wellness Hub
                             </p>
                             <p class="card-text">
                                 <i class="fa-solid fa-money-bill"></i>
-                                ￡10-20 per person
+                                ￡1-10 per person
                             </p>
                             <p class="card-text">
                                 <i class="fa-solid fa-star"></i>
-                                3.9 (220)
+                                4.2 (26)
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="col" data-rating="4.9" data-price="18" data-location="inside">
-                    <div class="card h-100">
-                        <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title"
-                                style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
-                                R4.9P18
-                            </h5>
-                            <p class="card-text">
-                                <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
-                                Warwick Art Center
-                            </p>
-                            <p class="card-text">
-                                <i class="fa-solid fa-money-bill"></i>
-                                ￡10-20 per person
-                            </p>
-                            <p class="card-text">
-                                <i class="fa-solid fa-star"></i>
-                                3.9 (220)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" data-rating="2.0" data-price="30" data-location="inside">
-                    <div class="card h-100">
-                        <img src="pic/res/Benugo/benugo_cover.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title"
-                                style="font-family: 'Oswald', sans-serif; color: #552d62; font-size: 22px;">
-                                R2.0P30
-                            </h5>
-                            <p class="card-text">
-                                <i class="fa-solid fa-location-dot" style="margin-left: 4px; margin-right: 4px;"></i>
-                                Warwick Art Center
-                            </p>
-                            <p class="card-text">
-                                <i class="fa-solid fa-money-bill"></i>
-                                ￡10-20 per person
-                            </p>
-                            <p class="card-text">
-                                <i class="fa-solid fa-star"></i>
-                                3.9 (220)
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
 
-        
+        </div>
+
+
 
     </div>
 
